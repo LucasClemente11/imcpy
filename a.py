@@ -27,17 +27,17 @@ def calcular_imc():
     else:
         messagebox.showinfo("Classificação", "Obesidade grau III")
 
-    # Limpar os campos de entrada
+   
     entry_nome.delete(0, tk.END)
     entry_idade.delete(0, tk.END)
     entry_peso.delete(0, tk.END)
     entry_altura.delete(0, tk.END)
 
-# Criando a janela
+
 #root = tk.Tk()
 #root.title("Calculadora de IMC")
 
-# Crie a janela
+
 root = tk.Tk()
 root.title("Calculadora de IMC")
 
@@ -47,11 +47,11 @@ posx = (root.winfo_screenwidth() - largura) // 2
 posy = (root.winfo_screenheight() - altura) // 2
 root.geometry(f"{largura}x{altura}+{posx}+{posy}")
 
-# Criando o frame principal
+
 frame = tk.Frame(root)
 frame.pack(expand=True, fill=tk.BOTH, padx=10, pady=10)
 
-# Criando os widgets
+
 label_nome = tk.Label(frame, text="Nome:")
 entry_nome = tk.Entry(frame)
 
@@ -66,7 +66,7 @@ entry_altura = tk.Entry(frame)
 
 button_calcular = tk.Button(frame, text="Calcular IMC", command=calcular_imc, bg='lightgray')
 
-# Posicionando os widgets no frame usando pack
+
 label_nome.pack(side=tk.TOP, fill=tk.X, pady=5)
 entry_nome.pack(side=tk.TOP, fill=tk.X, padx=5, pady=5)
 
@@ -81,5 +81,5 @@ entry_altura.pack(side=tk.TOP, fill=tk.X, padx=5, pady=5)
 
 button_calcular.pack(side=tk.TOP, fill=tk.X, pady=10)
 
-# Rodando a aplicação
+
 root.mainloop()
